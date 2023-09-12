@@ -1,0 +1,72 @@
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;  /* Ensures the background stays behind the content */
+    background-image: 
+    linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('boy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1; /* Adjust this for desired opacity level, for example 0.7 for 70% opacity */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resultsList {
+    list-style-type: none; /* Entfernt Aufzählungspunkte von der Liste */
+    padding: 0;            /* Setzt den Innenabstand auf 0 */
+    width: 100%;           /* Die Liste nimmt die volle Breite des übergeordneten Elements ein */
+    max-width: 400px;      /* Begrenzt die Breite der Liste */
+    background-color: blue; /* Semi-transparenter schwarzer Hintergrund */
+    border-radius: 5px;    /* Abgerundete Ecken */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Ein leichter Schatten */
+    margin-top: 40px;      /* Abstand nach oben für Platzierung */
+    text-align: center; 
+}
+
+#resultsList li {
+    padding: 10px;         /* Innenabstand für jedes Listenelement */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Eine untere Grenze für jedes Listenelement */
+    color: white;          /* Textfarbe */
+    font-size: 40px; 
+}
+
+#resultsList li:last-child {
+    border-bottom: none;   /* Entfernt die untere Grenze vom letzten Listenelement */
+}
